@@ -55,7 +55,7 @@ Some core featuers of this database systems are
       2. **update_bike_amounts:** It is triggered when a new row is inserted in the rides table. The amount bike would
       increase in end station and decrease in start station for corresponding bike type
       
-# CONCLUSION:
+# CONCLUSION
   The bike sharing database system represents a comprehensive solution for efficiently
   managing bike sharing operations and data. By implementing a star schema design using
   Oracle 11g, we have created a robust and scalable database system that meets the needs
