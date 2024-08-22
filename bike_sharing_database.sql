@@ -1,29 +1,7 @@
--------------FOR VISUALIZATION------------
+-------------FOR BETTER VISUALIZATION------------
 alter session set nls_date_format = 'dd/MON/yyyy hh24:mi:ss';
 set pagesize 100;
 set linesize 200;
---
---SELECT 
---    id,
---    rider_id,
---    bike_id,
---    start_station,
---    end_station,
---    start_time,
---    end_time,
---    (24 * 60 * 60) * (end_time - start_time) AS ride_duration_seconds
---FROM 
---    bike_rides;
-
---select  * from stations join (select station_id,SUM(bike_amount) FROM bike_amounts GROUP BY station_id ORDER BY SUM(bike_amount) DESC) second_table on second_table.station_id=stations.station_id WHERE ROWNUM=1; 
-SELECT AVG((end_time - start_time) * 24 * 60 * 60) AS "Average Duration (in seconds)"
-FROM bike_rides;
-SELECT COUNT(*) AS "Rides before 12 PM"
-FROM bike_rides
-WHERE EXTRACT(HOUR FROM start_time) < 12;
-
-
-/*
 
 
 ---------------CREATING TABLE-----------------------
@@ -130,7 +108,7 @@ BEGIN
 END;
 /
 
------------------------INSERTING DATA---------------------------
+-----------------------INSERTING DUMMY DATA---------------------------
 -- Populate bike_types table
 INSERT INTO bike_types (bike_id, bike_type)
 VALUES (1, 'Mountain Bike');
@@ -233,5 +211,3 @@ VALUES (3, 3, 2, 1, TO_DATE('2024-04-12 14:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_
 
 INSERT INTO bike_rides (rider_id, bike_id, start_station, end_station, start_time, end_time)
 VALUES (1, 1, 2, 2, TO_DATE('2024-04-12 10:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-04-12 11:00:00', 'YYYY-MM-DD HH24:MI:SS'));
-
-*/
