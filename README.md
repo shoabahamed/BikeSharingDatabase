@@ -35,16 +35,19 @@ There are five tables in this database
 # Featurs
 Some core featuers of this database systems are 
   * Use of different constraints such as-
+
       1. Primary Constraint
       2. Unique Constraint
       3. Non Null Constraint
       4. Check Constraint
 
   * Relationships used:
+
       1. one to many
       2. many to many
          
   * Use of Triggers-
+  
       1. **bike_rides_on_insert:**  auto incrementation of primary keys in Bike
       Rides table and Riders Table as they would be updated all the time with new rides or user
       data. Only in oracle we have to do this. In other sql languages like mysql you do not have go
