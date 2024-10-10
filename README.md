@@ -61,3 +61,8 @@ Some core featuers of this database systems are
   Oracle 11g, we have created a robust and scalable database system that meets the needs
   of various stakeholders involved in bike sharing services.
 
+# LICENSE
+
+[MIT LICENSE](LICENSE)
+
+
